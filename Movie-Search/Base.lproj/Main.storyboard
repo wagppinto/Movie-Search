@@ -24,6 +24,9 @@
                                 <state key="normal" title="Search">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="search:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="B26-gz-lp7"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="en8-UI-siq">
                                 <rect key="frame" x="0.0" y="126" width="320" height="442"/>
@@ -38,6 +41,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Rod-90-9Qe"/>
                     <connections>
+                        <outlet property="searchField" destination="E2E-XK-vte" id="PX2-AA-0E7"/>
                         <outlet property="tableView" destination="en8-UI-siq" id="zpo-n2-2c9"/>
                     </connections>
                 </viewController>

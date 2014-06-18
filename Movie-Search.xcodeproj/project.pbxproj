@@ -24,6 +24,7 @@
 		7167C7011952498600FD8F55 /* MSResponseTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167C7001952498600FD8F55 /* MSResponseTableViewDataSource.m */; };
 		7167C70519524BC700FD8F55 /* MSMovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167C70319524BC700FD8F55 /* MSMovieDetailViewController.m */; };
 		7167C70619524BC700FD8F55 /* MSMovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7167C70419524BC700FD8F55 /* MSMovieDetailViewController.xib */; };
+		7167C70F19525B6500FD8F55 /* MovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167C70E19525B6500FD8F55 /* MovieController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		7167C70219524BC700FD8F55 /* MSMovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMovieDetailViewController.h; sourceTree = "<group>"; };
 		7167C70319524BC700FD8F55 /* MSMovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMovieDetailViewController.m; sourceTree = "<group>"; };
 		7167C70419524BC700FD8F55 /* MSMovieDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSMovieDetailViewController.xib; sourceTree = "<group>"; };
+		7167C70D19525B6500FD8F55 /* MovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieController.h; sourceTree = "<group>"; };
+		7167C70E19525B6500FD8F55 /* MovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				7167C70219524BC700FD8F55 /* MSMovieDetailViewController.h */,
 				7167C70319524BC700FD8F55 /* MSMovieDetailViewController.m */,
 				7167C70419524BC700FD8F55 /* MSMovieDetailViewController.xib */,
+				7167C70D19525B6500FD8F55 /* MovieController.h */,
+				7167C70E19525B6500FD8F55 /* MovieController.m */,
 				7167C6DF1952460600FD8F55 /* Images.xcassets */,
 				7167C6CE1952460600FD8F55 /* Supporting Files */,
 			);
@@ -266,6 +271,7 @@
 			files = (
 				7167C6D81952460600FD8F55 /* MSAppDelegate.m in Sources */,
 				7167C6DE1952460600FD8F55 /* MSViewController.m in Sources */,
+				7167C70F19525B6500FD8F55 /* MovieController.m in Sources */,
 				7167C70519524BC700FD8F55 /* MSMovieDetailViewController.m in Sources */,
 				7167C7011952498600FD8F55 /* MSResponseTableViewDataSource.m in Sources */,
 				7167C6D41952460600FD8F55 /* main.m in Sources */,
@@ -473,6 +479,7 @@
 				7167C6F81952460600FD8F55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7167C6F91952460600FD8F55 /* Build configuration list for PBXNativeTarget "Movie-SearchTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +488,7 @@
 				7167C6FB1952460600FD8F55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

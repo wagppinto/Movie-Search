@@ -12,6 +12,7 @@
 
 @interface MSViewController () <UITableViewDelegate>
 
+@property (nonatomic, strong) IBOutlet UITextField *searchField;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) MSResponseTableViewDataSource *dataSource;
 
@@ -26,16 +27,13 @@
     self.dataSource = [MSResponseTableViewDataSource new];
     
     self.tableView.dataSource = self.dataSource;
-    [self.dataSource registerTableView:self.tableView];
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
 
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)search:(id)sender {
+
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

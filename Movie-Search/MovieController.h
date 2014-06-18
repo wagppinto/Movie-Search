@@ -1,5 +1,5 @@
 //
-//  MSResponseTableViewDataSource.h
+//  MovieController.h
 //  Movie-Search
 //
 //  Created by Joshua Howland on 6/18/14.
@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MSResponseTableViewDataSource : NSObject <UITableViewDataSource>
+@interface MovieController : NSObject
+
++ (MovieController *)sharedInstance;
+
+@property (nonatomic, strong) NSArray *resultMovies;
 
 @end
