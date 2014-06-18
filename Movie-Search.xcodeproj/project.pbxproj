@@ -21,6 +21,9 @@
 		7167C6E91952460600FD8F55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7167C6CB1952460600FD8F55 /* UIKit.framework */; };
 		7167C6F11952460600FD8F55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7167C6EF1952460600FD8F55 /* InfoPlist.strings */; };
 		7167C6F31952460600FD8F55 /* Movie_SearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167C6F21952460600FD8F55 /* Movie_SearchTests.m */; };
+		7167C7011952498600FD8F55 /* MSResponseTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167C7001952498600FD8F55 /* MSResponseTableViewDataSource.m */; };
+		7167C70519524BC700FD8F55 /* MSMovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167C70319524BC700FD8F55 /* MSMovieDetailViewController.m */; };
+		7167C70619524BC700FD8F55 /* MSMovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7167C70419524BC700FD8F55 /* MSMovieDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		7167C6EE1952460600FD8F55 /* Movie-SearchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Movie-SearchTests-Info.plist"; sourceTree = "<group>"; };
 		7167C6F01952460600FD8F55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7167C6F21952460600FD8F55 /* Movie_SearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie_SearchTests.m; sourceTree = "<group>"; };
+		7167C6FF1952498600FD8F55 /* MSResponseTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSResponseTableViewDataSource.h; sourceTree = "<group>"; };
+		7167C7001952498600FD8F55 /* MSResponseTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSResponseTableViewDataSource.m; sourceTree = "<group>"; };
+		7167C70219524BC700FD8F55 /* MSMovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMovieDetailViewController.h; sourceTree = "<group>"; };
+		7167C70319524BC700FD8F55 /* MSMovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMovieDetailViewController.m; sourceTree = "<group>"; };
+		7167C70419524BC700FD8F55 /* MSMovieDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSMovieDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,11 @@
 				7167C6D91952460600FD8F55 /* Main.storyboard */,
 				7167C6DC1952460600FD8F55 /* MSViewController.h */,
 				7167C6DD1952460600FD8F55 /* MSViewController.m */,
+				7167C6FF1952498600FD8F55 /* MSResponseTableViewDataSource.h */,
+				7167C7001952498600FD8F55 /* MSResponseTableViewDataSource.m */,
+				7167C70219524BC700FD8F55 /* MSMovieDetailViewController.h */,
+				7167C70319524BC700FD8F55 /* MSMovieDetailViewController.m */,
+				7167C70419524BC700FD8F55 /* MSMovieDetailViewController.xib */,
 				7167C6DF1952460600FD8F55 /* Images.xcassets */,
 				7167C6CE1952460600FD8F55 /* Supporting Files */,
 			);
@@ -231,6 +244,7 @@
 			files = (
 				7167C6E01952460600FD8F55 /* Images.xcassets in Resources */,
 				7167C6D21952460600FD8F55 /* InfoPlist.strings in Resources */,
+				7167C70619524BC700FD8F55 /* MSMovieDetailViewController.xib in Resources */,
 				7167C6DB1952460600FD8F55 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +266,8 @@
 			files = (
 				7167C6D81952460600FD8F55 /* MSAppDelegate.m in Sources */,
 				7167C6DE1952460600FD8F55 /* MSViewController.m in Sources */,
+				7167C70519524BC700FD8F55 /* MSMovieDetailViewController.m in Sources */,
+				7167C7011952498600FD8F55 /* MSResponseTableViewDataSource.m in Sources */,
 				7167C6D41952460600FD8F55 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

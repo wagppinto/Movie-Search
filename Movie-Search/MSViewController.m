@@ -7,8 +7,13 @@
 //
 
 #import "MSViewController.h"
+#import "MSResponseTableViewDataSource.h"
+#import "MSMovieDetailViewController.h"
 
-@interface MSViewController ()
+@interface MSViewController () <UITableViewDelegate>
+
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) MSResponseTableViewDataSource *dataSource;
 
 @end
 
@@ -17,13 +22,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    self.dataSource = [MSResponseTableViewDataSource new];
+    
+    self.tableView.dataSource = self.dataSource;
+    [self.dataSource registerTableView:self.tableView];
+    self.tableView.delegate = self;
+    [self.view addSubview:self.tableView];
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    MSMovieDetailViewController *detailViewController = [MSMovieDetailViewController new];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end
