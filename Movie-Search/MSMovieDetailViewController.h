@@ -10,4 +10,6 @@
 
 @interface MSMovieDetailViewController : UIViewController
 
+- (void)updateWithMovie:(NSDictionary *)movie;
+
 @end

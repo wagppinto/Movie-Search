@@ -10,6 +10,4 @@
 
 @interface MSResponseTableViewDataSource : NSObject <UITableViewDataSource>
 
-- (void)registerTableView:(UITableView *)tableView;
-
 @end

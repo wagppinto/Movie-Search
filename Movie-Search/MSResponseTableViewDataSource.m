@@ -7,31 +7,36 @@
 //
 
 #import "MSResponseTableViewDataSource.h"
+#import "MovieController.h"
+
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 static NSString * const cellReuseKey = @"cell";
 
 @interface MSResponseTableViewDataSource () 
 
-
 @end
 
 @implementation MSResponseTableViewDataSource
 
-- (void)registerTableView:(UITableView *)tableView {
-    
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellReuseKey];
-    
-}
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [[MovieController sharedInstance].resultMovies count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseKey];
-    cell.textLabel.text = @"Your only cell";
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellReuseKey];
+    }
+    
+    NSDictionary *movie = [MovieController sharedInstance].resultMovies[indexPath.row];
+    cell.textLabel.text = movie[@"title"];
+    
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", movie[@"release_date"], movie[@"vote_average"]];
+    
+    [cell.imageView setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://image.tmdb.org/t/p/w92/%@", movie[@"poster_path"]]]];
+    
     return cell;
 }
 
