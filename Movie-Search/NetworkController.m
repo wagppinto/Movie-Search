@@ -8,6 +8,34 @@
 
 #import "NetworkController.h"
 
+NSString * const baseURL = @"http://api.themoviedb.org/3/";
+static NSString * const API_KEY = @"";
+
 @implementation NetworkController
+
+//this is the singleton that stablishes the connection with the URL passed
++ (AFHTTPSessionManager *)api {
+    
+    static AFHTTPSessionManager *api = nil; //set the session to nil.
+
+    //this is the singleton:
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        api = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseURL]];
+        api.responseSerializer = [AFJSONResponseSerializer serializer];
+        api.requestSerializer = [AFJSONRequestSerializer serializer];
+    });
+    return api;
+}
+
++ (NSDictionary *)getParametersWithAPIKey:(NSDictionary *)parameter{
+  
+    NSMutableDictionary *parametersWithAPIKey = [[NSMutableDictionary alloc]initWithDictionary:parameter];
+    [parametersWithAPIKey setObject:API_KEY forKey:@"apiKey"];
+    
+    return parametersWithAPIKey;
+    
+}
+
 
 @end
