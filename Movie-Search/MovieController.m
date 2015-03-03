@@ -18,7 +18,8 @@
         sharedInstance = [MovieController new];
     });
     return sharedInstance;
-    
 }
+
+
 
 @end

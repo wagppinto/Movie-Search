@@ -13,7 +13,7 @@ static NSString * const API_KEY = @"";
 
 @implementation NetworkController
 
-//this is the singleton that stablishes the connection with the URL passed
+//JSON Singleton that stablishes the connection with the URL passed
 + (AFHTTPSessionManager *)api {
     
     static AFHTTPSessionManager *api = nil; //set the session to nil.
@@ -21,9 +21,9 @@ static NSString * const API_KEY = @"";
     //this is the singleton:
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        api = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseURL]];
-        api.responseSerializer = [AFJSONResponseSerializer serializer];
-        api.requestSerializer = [AFJSONRequestSerializer serializer];
+        api = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseURL]];//geting the URL
+        api.responseSerializer = [AFJSONResponseSerializer serializer];//setup the response
+        api.requestSerializer = [AFJSONRequestSerializer serializer];//setup the request
     });
     return api;
 }
