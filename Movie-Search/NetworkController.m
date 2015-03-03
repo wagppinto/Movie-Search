@@ -8,7 +8,7 @@
 
 #import "NetworkController.h"
 
-NSString * const baseURL = @"http://api.themoviedb.org/3/";
+NSString * const baseURL = @"http://api.themoviedb.org/3";
 static NSString * const API_KEY = @"";
 
 @implementation NetworkController

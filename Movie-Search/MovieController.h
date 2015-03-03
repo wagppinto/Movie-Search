@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NetworkController.h"
 
 @interface MovieController : NSObject
 
 + (MovieController *)sharedInstance;
 
 @property (nonatomic, strong) NSArray *resultMovies;
+
+- (void)searchForMoviesWithName:(NSString *)movieName completion:(void (^)(BOOL success))completion;
+
 
 @end
